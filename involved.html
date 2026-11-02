@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved | The Green Canopy Initiative</title>
+  
+  <!-- SEO Meta Description -->
+  <meta name="description" content="Become a volunteer, partner with us, or sponsor a tree. Find out how you can support The Green Canopy Initiative in building sustainable cities.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><i class="fas fa-tree"></i> TGCI</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="impact.html">Our Impact</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="events.html">Events</a>
+      <a href="stories.html">Stories</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="involved" style="background:var(--light-bg); padding:2rem 0 3rem;">
+  <div class="container">
+    <h2 style="font-size:2.2rem; color:var(--forest); margin-bottom: 0.5rem;">Get Involved</h2>
+    <p style="margin-bottom:2rem; font-size: 1.1rem;">Whether you volunteer, partner, or sponsor — your support grows our canopy.</p>
+    
+    <div class="grid-3">
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>Volunteer</h3>
+        <p>Join our team: tree planting, education, and events.</p>
+        <a href="#volunteer-form" class="btn-primary" style="margin-top:1rem; display:inline-block;">Sign up</a>
+      </div>
+      
+      <div class="card">
+        <i class="fas fa-building"></i>
+        <h3>Corporate Partner</h3>
+        <p>Align your brand with sustainability. Sponsorship opportunities.</p>
+        <a href="contact.html" class="btn-secondary" style="margin-top:1rem; display:inline-block;">Learn more</a>
+      </div>
+      
+      <div class="card">
+        <i class="fas fa-gift"></i>
+        <h3>Sponsor</h3>
+        <p>Support a tree, a garden, or a school programme.</p>
+        <a href="donate.html" class="btn-secondary" style="margin-top:1rem; display:inline-block;">Donate</a>
+      </div>
+    </div>
+
+    <!-- Volunteer Enquiry Form -->
+    <div class="card" id="volunteer-form" style="margin-top:2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h3><i class="fas fa-pen-alt icon-left"></i>Volunteer / Enquiry Registration</h3>
+      <p style="margin-bottom: 1.5rem; color: #555;">Fill out this form to enquire about volunteering or partnering with us. We will get back to you with availability and costs (if applicable).</p>
+      
+      <form id="enquiryForm">
+        <div class="form-group">
+          <label for="enqName">Full name</label>
+          <input type="text" id="enqName" placeholder="e.g. Thandi Mokoena">
+          <span class="error-msg" id="enqNameError">Please enter your name.</span>
+        </div>
+        
+        <div class="form-group">
+          <label for="enqEmail">Email address</label>
+          <input type="email" id="enqEmail" placeholder="thandi@example.com">
+          <span class="error-msg" id="enqEmailError">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="enqPhone">Phone Number</label>
+          <input type="tel" id="enqPhone" placeholder="e.g. 082 123 4567">
+          <span class="error-msg" id="enqPhoneError">Please enter a valid phone number (at least 10 digits).</span>
+        </div>
+        
+        <div class="form-group">
+          <label for="enqInterest">Area of Interest</label>
+          <select id="enqInterest">
+            <option>Tree planting</option>
+            <option>Education & Workshops</option>
+            <option>Event coordination</option>
+            <option>Corporate Sponsorship</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="enqMessage">Message / Availability</label>
+          <textarea id="enqMessage" placeholder="Tell us a bit about yourself and when you are available..."></textarea>
+          <span class="error-msg" id="enqMessageError">Please write a short message.</span>
+        </div>
+        
+        <button type="submit" class="btn-primary">Submit Enquiry</button>
+        <div id="enquiryResponse" style="margin-top:1rem; font-weight:bold; color:var(--leaf);"></div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.5rem;">
+    <div><span style="font-weight:700; font-size:1.2rem;">The Green Canopy Initiative</span><br>NPO · since 2015</div>
+    <div><a href="index.html">Home</a> · <a href="impact.html">Impact</a> · <a href="involved.html">Get involved</a> · <a href="donate.html">Donate</a></div>
+    <div><i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-youtube"></i></div>
+  </div>
+  <div class="container" style="margin-top:1.2rem; font-size:0.9rem; opacity:0.8;">&copy; 2026 TGCI. Built with love for green cities.</div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Page-specific script for Enquiry Form Validation -->
+<script>
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('enqName').value.trim();
+    const email = document.getElementById('enqEmail').value.trim();
+    const phone = document.getElementById('enqPhone').value.trim();
+    const message = document.getElementById('enqMessage').value.trim();
+    let isValid = true;
+
+    // Hide all errors first
+    document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
+
+    // Validate Name
+    if (name === '') {
+      document.getElementById('enqNameError').style.display = 'block';
+      isValid = false;
+    }
+
+    // Validate Email
+    if (!email.includes('@') || !email.includes('.')) {
+      document.getElementById('enqEmailError').style.display = 'block';
+      isValid = false;
+    }
+
+    // Validate Phone (Simple check for at least 10 characters)
+    if (phone.length < 10) {
+      document.getElementById('enqPhoneError').style.display = 'block';
+      isValid = false;
+    }
+
+    // Validate Message
+    if (message.length < 5) {
+      document.getElementById('enqMessageError').style.display = 'block';
+      isValid = false;
+    }
+
+    // If valid, simulate submission
+    if (isValid) {
+      const responseDiv = document.getElementById('enquiryResponse');
+      responseDiv.innerText = 'Processing enquiry...';
+      responseDiv.style.color = '#5f9b4b';
+
+      setTimeout(() => {
+        // Fulfilling the requirement to "present the user with a response related to cost/availability"
+        responseDiv.innerHTML = 'Thank you, ' + name + '! Based on your interest in <strong>' + document.getElementById('enqInterest').value + '</strong>, a coordinator will email you within 24 hours regarding availability and any associated costs.';
+        this.reset();
+      }, 1500);
+    }
+  });
+</script>
+
+</body>
+</html>

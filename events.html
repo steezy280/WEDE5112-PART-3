@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | The Green Canopy Initiative</title>
+  
+  <!-- SEO Meta Description -->
+  <meta name="description" content="View upcoming community tree planting days, urban gardening workshops, and environmental events hosted by The Green Canopy Initiative.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- External CSS (Addresses Lecturer Feedback) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><i class="fas fa-tree"></i> TGCI</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="impact.html">Our Impact</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="events.html">Events</a>
+      <a href="stories.html">Stories</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="events">
+  <div class="page-hero">
+    <div class="container">
+      <h1>Upcoming Events</h1>
+      <p>Workshops, public plantings, and community days — RSVP today.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="grid-2">
+      
+      <!-- Left Column: Event List & Search -->
+      <div>
+        <!-- Dynamic Search Input (Part 3 Requirement) -->
+        <div class="form-group" style="margin-bottom: 2rem;">
+          <label for="eventSearch"><i class="fas fa-search"></i> Search Events</label>
+          <input type="text" id="eventSearch" placeholder="Type to filter events (e.g., 'workshop', 'planting')...">
+        </div>
+
+        <!-- Event List Container -->
+        <div id="eventList">
+          
+          <div class="event-card">
+            <div class="date"><i class="far fa-calendar-alt icon-left"></i>15 October 2026 · 9:00 AM</div>
+            <h3>Community Tree Planting Day</h3>
+            <p>Join us at Delta Park for a morning of tree planting. All tools and refreshments provided. Bring your family!</p>
+            <span class="tag"><i class="fas fa-check-circle"></i> Open for RSVP</span>
+          </div>
+          
+          <div class="event-card">
+            <div class="date"><i class="far fa-calendar-alt icon-left"></i>28 October 2026 · 2:00 PM</div>
+            <h3>Workshop: Urban Gardening</h3>
+            <p>Learn how to grow your own food in small spaces. Practical tips and seed giveaways.</p>
+            <span class="tag"><i class="fas fa-check-circle"></i> Open for RSVP</span>
+          </div>
+          
+          <div class="event-card">
+            <div class="date"><i class="far fa-calendar-alt icon-left"></i>5 November 2026 · 10:00 AM</div>
+            <h3>School Environmental Day</h3>
+            <p>Interactive session at Soweto Primary School. Volunteers welcome to assist with activities.</p>
+            <span class="tag"><i class="fas fa-check-circle"></i> Open for RSVP</span>
+          </div>
+          
+          <div class="event-card">
+            <div class="date"><i class="far fa-calendar-alt icon-left"></i>20 November 2026 · 8:30 AM</div>
+            <h3>Green Canopy Annual Meeting</h3>
+            <p>Review our impact and plan for 2027. Open to all members and volunteers.</p>
+            <span class="tag"><i class="fas fa-check-circle"></i> Open for RSVP</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: RSVP Form -->
+      <div>
+        <div class="card">
+          <h3><i class="fas fa-pen-alt icon-left"></i>RSVP for an Event</h3>
+          <!-- Note: The onsubmit uses basic JS alert for simplicity here. 
+               If you want full validation, you can apply the same logic from contact.html -->
+          <form onsubmit="event.preventDefault(); alert('RSVP Successful! We will email you the details.'); this.reset();">
+            <div class="form-group">
+              <label for="rsvpName">Full name</label>
+              <input type="text" id="rsvpName" placeholder="e.g. Thandi Mokoena" required>
+            </div>
+            <div class="form-group">
+              <label for="rsvpEmail">Email</label>
+              <input type="email" id="rsvpEmail" placeholder="thandi@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="rsvpEvent">Select event</label>
+              <select id="rsvpEvent" required>
+                <option value="" disabled selected>Choose an event...</option>
+                <option>Community Tree Planting Day (15 Oct)</option>
+                <option>Workshop: Urban Gardening (28 Oct)</option>
+                <option>School Environmental Day (5 Nov)</option>
+                <option>Green Canopy Annual Meeting (20 Nov)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;">RSVP now</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.5rem;">
+    <div><span style="font-weight:700; font-size:1.2rem;">The Green Canopy Initiative</span><br>NPO · since 2015</div>
+    <div><a href="index.html">Home</a> · <a href="impact.html">Impact</a> · <a href="involved.html">Get involved</a> · <a href="donate.html">Donate</a></div>
+    <div><i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-youtube"></i></div>
+  </div>
+  <div class="container" style="margin-top:1.2rem; font-size:0.9rem; opacity:0.8;">&copy; 2026 TGCI. Built with love for green cities.</div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

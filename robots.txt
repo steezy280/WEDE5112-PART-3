@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point to your sitemap so search engines can find all your pages
+Sitemap: https://your-netlify-url.netlify.app/sitemap.xml
